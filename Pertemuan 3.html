@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 3 - Segitiga atau Persegi?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fffaf0; /* Oranye/Kuning sangat lembut */
+            color: #334155;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Fredoka One', cursive;
+        }
+        .card {
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+            border: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .card-triangle { border-color: #fdba74; } /* Oranye */
+        .card-square { border-color: #93c5fd; }   /* Biru */
+        
+        .btn-fun {
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-fun:active { transform: scale(0.95); }
+        
+        .input-fun {
+            border: 3px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 0.6rem 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .input-fun:focus {
+            border-color: #f97316;
+            background-color: #fff7ed;
+        }
+
+        .drop-shadow-orange { filter: drop-shadow(0 5px 5px rgba(249, 115, 22, 0.2)); }
+        .drop-shadow-blue { filter: drop-shadow(0 5px 5px rgba(59, 130, 246, 0.2)); }
+
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        .animate-pulse-soft { animation: pulse-soft 3s infinite ease-in-out; }
+    </style>
+</head>
+<body class="pb-24">
+
+    <!-- Header Halaman -->
+    <header class="bg-white border-b-8 border-orange-100 pt-12 pb-10 px-6 text-center shadow-sm">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-center gap-4 mb-4 text-6xl">
+                <span class="drop-shadow-orange">🔺</span>
+                <span class="drop-shadow-blue">🟦</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl text-slate-700 mb-2 uppercase tracking-wide">
+                <span class="text-orange-500">Pertemuan 3</span> – Segitiga atau Persegi?
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 font-semibold italic">Saatnya membandingkan dan memilih bangun yang paling tepat!</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 mt-12 space-y-12">
+
+        <!-- Bagian A – Tujuan Pembelajaran -->
+        <section class="card border-slate-200 bg-slate-50">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="text-4xl">🎯</span>
+                <h2 class="text-2xl text-slate-700">Hari ini kamu akan belajar untuk:</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-2xl shadow-sm flex items-start gap-3 border-l-4 border-orange-400">
+                    <span class="font-bold text-orange-500">1.</span>
+                    <span class="text-sm font-semibold">Membandingkan jumlah sisi dan sudut</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm flex items-start gap-3 border-l-4 border-blue-400">
+                    <span class="font-bold text-blue-500">2.</span>
+                    <span class="text-sm font-semibold">Membandingkan jenis sudut dan simetri</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm flex items-start gap-3 border-l-4 border-green-400">
+                    <span class="font-bold text-green-500">3.</span>
+                    <span class="text-sm font-semibold">Membandingkan rumus luas dan keliling</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm flex items-start gap-3 border-l-4 border-purple-400">
+                    <span class="font-bold text-purple-500">4.</span>
+                    <span class="text-sm font-semibold">Menyimpulkan keputusan secara logis</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian B – Pertanyaan Pemandu -->
+        <section class="card bg-orange-50 border-orange-200 animate-pulse-soft">
+            <h2 class="text-2xl text-orange-600 mb-4">🏠 Pertanyaan Utama Kita</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                Jika kamu diminta memilih bangun untuk <strong>atap rumah</strong> dan <strong>lantai kelas</strong>...
+                <br><span class="text-orange-600 font-bold italic">❓ Kapan kamu memilih segitiga dan kapan memilih persegi? Mengapa?</span>
+            </p>
+            <textarea class="input-fun w-full" rows="3" placeholder="Tulis jawaban awalmu di sini..."></textarea>
+        </section>
+
+        <!-- Bagian C: Kegiatan Pembelajaran -->
+        
+        <!-- Kegiatan 1 -->
+        <section class="card card-triangle">
+            <h3 class="text-xl text-orange-600 mb-6 uppercase">🧠 Kegiatan 1: Mengingat Konsep</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="text-center">
+                    <div class="text-7xl mb-2">🔺</div>
+                    <p class="font-bold text-orange-500 mb-4 text-xl">SEGITIGA</p>
+                    <div class="space-y-4">
+                        <input type="text" class="input-fun w-full" placeholder="Jumlah sisi: ...">
+                        <input type="text" class="input-fun w-full" placeholder="Jumlah sudut: ...">
+                        <input type="text" class="input-fun w-full" placeholder="Jenis sudut: ...">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="text-7xl mb-2">🟦</div>
+                    <p class="font-bold text-blue-500 mb-4 text-xl">PERSEGI</p>
+                    <div class="space-y-4">
+                        <input type="text" class="input-fun w-full" placeholder="Jumlah sisi: ...">
+                        <input type="text" class="input-fun w-full" placeholder="Jumlah sudut: ...">
+                        <input type="text" class="input-fun w-full" placeholder="Jenis sudut: ...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kegiatan 2 -->
+        <section class="card card-square">
+            <h3 class="text-xl text-blue-600 mb-6 uppercase">📊 Kegiatan 2: Tabel Perbandingan Sifat</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-blue-50">
+                            <th class="border-2 border-blue-100 p-4 text-left">Aspek</th>
+                            <th class="border-2 border-blue-100 p-4 text-center">Segitiga</th>
+                            <th class="border-2 border-blue-100 p-4 text-center">Persegi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="border-2 border-blue-50 p-4 font-semibold">Memiliki 3 sisi</td>
+                            <td class="border-2 border-blue-50 p-4 text-center"><input type="checkbox" class="w-6 h-6 accent-orange-500"></td>
+                            <td class="border-2 border-blue-50 p-4 text-center"><input type="checkbox" class="w-6 h-6 accent-blue-500"></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="border-2 border-blue-50 p-4 font-semibold">Memiliki 4 sisi</td>
+                            <td class="border-2 border-blue-50 p-4 text-center"><input type="checkbox" class="w-6 h-6 accent-orange-500"></td>
+                            <td class="border-2 border-blue-50 p-4 text-center"><input type="checkbox" class="w-6 h-6 accent-blue-500"></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="border-2 border-blue-50 p-4 font-semibold">Semua sudut siku-siku</td>
+                            <td class="border-2 border-blue-50 p-4 text-center"><input type="checkbox" class="w-6 h-6 accent-orange-500"></td>
+                            <td class="border-2 border-blue-50 p-4 text-center"><input type="checkbox" class="w-6 h-6 accent-blue-500"></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="border-2 border-blue-50 p-4 font-semibold">Memiliki simetri lipat</td>
+                            <td class="border-2 border-blue-50 p-4 text-center"><input type="checkbox" class="w-6 h-6 accent-orange-500"></td>
+                            <td class="border-2 border-blue-50 p-4 text-center"><input type="checkbox" class="w-6 h-6 accent-blue-500"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-8">
+                <label class="block font-bold mb-2">Kesimpulan sementara:</label>
+                <textarea class="input-fun w-full" rows="2" placeholder="Tulis satu atau dua kalimat perbedaan utamanya..."></textarea>
+            </div>
+        </section>
+
+        <!-- Kegiatan 3 -->
+        <section class="card border-green-200">
+            <h3 class="text-xl text-green-600 mb-6 uppercase">📐 Kegiatan 3: Perbandingan Luas & Keliling</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-orange-50 p-6 rounded-3xl border-2 border-orange-100">
+                    <p class="font-bold text-orange-600 mb-4">Rumus Segitiga 🔺</p>
+                    <div class="bg-white p-4 rounded-xl shadow-inner text-sm space-y-2">
+                        <p><strong>Luas:</strong> ½ × alas × tinggi</p>
+                        <p><strong>Keliling:</strong> jumlah semua sisi</p>
+                    </div>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-3xl border-2 border-blue-100">
+                    <p class="font-bold text-blue-600 mb-4">Rumus Persegi 🟦</p>
+                    <div class="bg-white p-4 rounded-xl shadow-inner text-sm space-y-2">
+                        <p><strong>Luas:</strong> sisi × sisi</p>
+                        <p><strong>Keliling:</strong> 4 × sisi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div>
+                    <label class="block font-bold mb-2">Mengapa rumus luas segitiga dan persegi berbeda?</label>
+                    <textarea class="input-fun w-full" rows="2" placeholder="Jelaskan menurut pendapatmu..."></textarea>
+                </div>
+                <div>
+                    <label class="block font-bold mb-2">Bangun mana yang lebih mudah dihitung kelilingnya? Mengapa?</label>
+                    <textarea class="input-fun w-full" rows="2" placeholder="Menurutku yang lebih mudah adalah..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kegiatan 4 (PBL + AI) -->
+        <section class="card bg-gradient-to-br from-indigo-500 to-purple-600 text-white border-none">
+            <div class="flex items-center gap-6 mb-8">
+                <div class="text-6xl floating">🤖</div>
+                <div>
+                    <h3 class="text-2xl uppercase">Kegiatan 4: Misi Perancang Sekolah</h3>
+                    <p class="text-indigo-100 italic">"Tim kalian adalah perancang sekolah masa depan!"</p>
+                </div>
+            </div>
+            
+            <div class="bg-white/10 p-6 rounded-3xl border-2 border-white/20 mb-8">
+                <p class="font-bold mb-4">Tugas Kelompok:</p>
+                <ol class="list-decimal list-inside space-y-2 text-sm md:text-base">
+                    <li>Diskusikan bangun yang paling sesuai untuk kebutuhan di bawah.</li>
+                    <li>Tanyakan ke AI: <strong>"Apa kelebihan segitiga dan persegi jika digunakan dalam bangunan?"</strong></li>
+                    <li>Tulis keputusan final kelompok kalian.</li>
+                </ol>
+            </div>
+
+            <div class="space-y-4">
+                <div class="grid grid-cols-3 gap-4 font-bold text-center border-b border-white/30 pb-2">
+                    <div>Kebutuhan</div>
+                    <div>Pilihan</div>
+                    <div>Alasan Kami</div>
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                    <div class="text-sm font-bold">Lantai Kelas</div>
+                    <select class="input-fun w-full text-slate-800 text-xs">
+                        <option>--- Pilih ---</option>
+                        <option>Segitiga</option>
+                        <option>Persegi</option>
+                    </select>
+                    <input type="text" class="input-fun w-full text-slate-800 text-xs" placeholder="Karena...">
+                </div>
+                <div class="grid grid-cols-3 gap-4 items-center">
+                    <div class="text-sm font-bold">Atap Taman</div>
+                    <select class="input-fun w-full text-slate-800 text-xs">
+                        <option>--- Pilih ---</option>
+                        <option>Segitiga</option>
+                        <option>Persegi</option>
+                    </select>
+                    <input type="text" class="input-fun w-full text-slate-800 text-xs" placeholder="Karena...">
+                </div>
+            </div>
+            <p class="mt-8 text-xs text-indigo-100 font-bold italic text-center">💡 AI membantu kita melihat sisi lain, tapi kamu yang memutuskan!</p>
+        </section>
+
+        <!-- Kegiatan 5 -->
+        <section class="card border-pink-200">
+            <h3 class="text-xl text-pink-600 mb-6 uppercase">🪞 Kegiatan 5: Refleksi Individu</h3>
+            <div class="space-y-6">
+                <div>
+                    <p class="font-bold mb-3">Hal baru apa yang paling seru kamu pelajari hari ini?</p>
+                    <textarea class="input-fun w-full" rows="2" placeholder="Jawabanmu..."></textarea>
+                </div>
+                <div>
+                    <p class="font-bold mb-3">Bangun mana yang lebih mudah kamu pahami? Mengapa?</p>
+                    <textarea class="input-fun w-full" rows="2" placeholder="Menurutku..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian D – Kesimpulan Pembelajaran -->
+        <section class="text-center bg-white p-12 rounded-[4rem] shadow-2xl border-8 border-double border-orange-200">
+            <h2 class="text-4xl text-slate-700 mb-8 flex items-center justify-center gap-4">
+                <span>📌</span> Kesimpulan Akhir
+            </h2>
+            <div class="space-y-8 text-left max-w-2xl mx-auto">
+                <p class="text-xl leading-relaxed text-slate-600 italic">
+                    Segitiga dan persegi memiliki persamaan dan perbedaan unik.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🔺</span>
+                        <div class="flex-1">
+                            <p class="font-bold text-orange-500 mb-2">Segitiga lebih cocok untuk:</p>
+                            <input type="text" class="input-fun w-full border-orange-100" placeholder="Contoh: Atap rumah agar air mengalir...">
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl">🟦</span>
+                        <div class="flex-1">
+                            <p class="font-bold text-blue-500 mb-2">Persegi lebih cocok untuk:</p>
+                            <input type="text" class="input-fun w-full border-blue-100" placeholder="Contoh: Lantai agar tidak ada celah kosong...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-slate-100">
+                <p class="text-2xl text-green-500 font-bold mb-4">Hebat! Kamu sudah menyelesaikan Tantangan Penyelidikan Bangun Datar! 🏆</p>
+                <button class="btn-fun bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-12 rounded-full text-xl shadow-lg">
+                    Selesai & Simpan Proyek 📂
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Nav -->
+    <footer class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md p-4 flex justify-between items-center px-8 border-t border-slate-200 z-50">
+        <button class="text-slate-400 font-bold hover:text-orange-500 transition-colors">← Pertemuan 2</button>
+        <div class="flex gap-2">
+            <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+            <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+            <div class="w-3 h-3 rounded-full bg-orange-500"></div>
+        </div>
+        <button class="bg-orange-500 text-white px-8 py-2 rounded-full font-bold shadow-md hover:bg-orange-600 transition-all btn-fun">Lihat Raport Proyek</button>
+    </footer>
+
+</body>
+</html>
